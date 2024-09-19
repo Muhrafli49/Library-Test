@@ -1,3 +1,4 @@
+// book.test.js
 import supertest from 'supertest';
 import { app } from '../app';
 import { 
@@ -12,7 +13,7 @@ describe('GET /library/books/available', () => {
 
     afterEach(async () => {
         await removeAllTestBooks();
-    }); 
+    });
 
     it('should return available books', async () => {
         const result = await supertest(app)
